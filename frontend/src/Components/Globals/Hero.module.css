@@ -1,0 +1,11 @@
+.Hero{
+    background: url("https://previews.123rf.com/images/sejalanart/sejalanart2006/sejalanart200600574/149402843-food-delivery-logo-vector-for-business-company-modern-delivery-service-logo-template-design.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
