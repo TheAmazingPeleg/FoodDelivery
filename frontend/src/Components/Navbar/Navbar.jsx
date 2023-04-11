@@ -6,13 +6,16 @@ function Navbar({ children }) {
     <nav className="navbar">
       <ol className="navbar-list">
 
-        <li className="navbar-list-item">
+        <li className="navbar-left">
           <a className="navbar-list-item-anchor" href="/">Home</a>
-        </li>
-
-        <li className="navbar-list-item">
           <a className="navbar-list-item-anchor" href="youtube.com">About Us</a>
         </li>
+
+        <div className="navbar-middle">
+          <li className="navbar-list-item">
+            {React.Children.toArray(children).find((child) => child.type.name === 'SearchBar')}
+          </li>
+        </div>
 
         <li className="navbar-right">
           {/* temporary */}
@@ -22,14 +25,7 @@ function Navbar({ children }) {
             <img className="navbar-list-item-image" src="https://github.com/ColmanDevClub.png" alt="Colman Dev Club logo" />
           </a>
           {/* temporary */}
-          {React.Children.toArray(children).find((child) => child.type.displayName === 'LoginButton')}
         </li>
-
-        <div className="navbar-middle">
-          <li className="navbar-list-item">
-            {React.Children.toArray(children).find((child) => child.type.displayName === 'SearchBar')}
-          </li>
-        </div>
 
       </ol>
     </nav>
