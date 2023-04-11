@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap%27');
+
+:root
+{
+    --background-color: #ffffff;
+    --primary-button-color: #2595e7;
+    --secondary-button-color: #007cd6;
+    --Navbar-backgoround-color: #e1f5fe;
+    --Navbar-text-Color: #2b373f;
+    --Navbar-font: 'Quicksand', sans-serif;
+    --primary-text-color: #000000;
+}
