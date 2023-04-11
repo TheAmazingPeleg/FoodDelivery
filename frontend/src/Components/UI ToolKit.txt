@@ -23,10 +23,10 @@ Hooks needed: <list of hooks>
 
 Nir - the mainTheme is the app itself, do not build the theme on the components folder, do it as the generic css and design the app component itself.
 
-SearchBar-
+SearchBar -
 Props required: a call back function which handles the search logic- the search values and what to do with them.
 Hooks needed: useState.
 
-Navbar-
+Navbar -
 Props required: every component that needs to be shown at the navbar.
 Hooks needed: none.
