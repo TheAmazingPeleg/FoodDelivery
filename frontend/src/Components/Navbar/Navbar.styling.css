@@ -47,12 +47,12 @@
 
 .navbar-middle{
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-left: 25rem;
     margin-right: 25rem;
-
 }
 
 .navbar-right {
