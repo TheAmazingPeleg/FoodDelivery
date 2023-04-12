@@ -1,27 +1,17 @@
-MainTheme (app design) - Nir
-Generic css colors TypeDef - Aviv
-Button - Nir
-List - Nir
-Input - Peleg
-navBar - Itay
+MainTheme (app design) - Eyal, Itay
+Generic css colors TypeDef - Eyal, Itay
+Button - Daniel
+List - Daniel
 popup: generic, errormMessage, successMessage - Daniel
-searchBar - Eyal
-a Href - Peleg
-Paragraph - Peleg
-HeadLines (h1, h2, h3...) - Peleg
 iconButton - Daniel
 
 instructions - each developer creates his Components inside frontend/src/Components/<componentName>,
 
-after finishing the component, update the "UI ToolKit.text" in the scheme:
+after finishing a UI component, update the "UI ToolKit.text" in the scheme:
 
 <componentName> -
 Props required: <list of props by order!>
 Hooks needed: <list of hooks>
-
-*To Everyone - notice that you use Aviv's generic color by the definition, do not use colors code!
-
-Nir - the mainTheme is the app itself, do not build the theme on the components folder, do it as the generic css and design the app component itself.
 
 SearchBar -
 Props required: a call back function which handles the search logic- the search values and what to do with them.
@@ -30,3 +20,14 @@ Hooks needed: useState.
 Navbar -
 Props required: every component that needs to be shown at the navbar.
 Hooks needed: none.
+
+Input -
+Props required: Required: Type, Name. All the other generic input attributes are avaliable but not required.
+Hooks needed: useState
+
+Css inside the index.css:
+Link - color: blue, hover: lightBlue
+Paragraph - color: black
+H1 - color: blue
+H2 - color: lightBlue
+h3 - color: white
