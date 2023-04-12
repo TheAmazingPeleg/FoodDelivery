@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @import url('../../GenericColors.css');
 
-
 .navbar {
     display: flex;
     align-items: center;
@@ -9,8 +8,6 @@
     min-height: 5rem;
     width: 100%;
     background-color: var(--Navbar-background-color);
-    font-family: var(--text-font);
-    color: var(--Navbar-text-color);
     box-shadow: 0px 2px 4px #5a5b6a3d, 0px 1px 2px #3a3a443d;
 }
   
@@ -25,11 +22,12 @@
     padding-left: 3.25rem;
 }
 
-.navbar-list-item-anchor {
+.navbar-left .navbar-list-item-anchor {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--Navbar-text-color);
     text-decoration: none;
+    font-family: var(--text-font);
+    color: var(--Navbar-text-color);
 }
 
 .navbar-list-item-anchor:hover {
