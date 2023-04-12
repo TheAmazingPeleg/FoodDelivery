@@ -23,3 +23,26 @@ Hooks needed: <list of hooks>
 
 Nir - the mainTheme is the app itself, do not build the theme on the components folder, do it as the generic css and design the app component itself.
 
+<<<<<<< Updated upstream
+=======
+Input -
+Props required: Type, Name. All the other generic input attributes are avaliable but not required.
+Hooks needed: useState.
+
+Popup -
+Props required: message: a string representing the message that will be displayed in the popup.
+                type: a string representing the type of the popup.
+Hooks needed: none.
+
+IconButton -
+Props required: iconClassName: a string representing the class name of the icon that will be displayed in the button.
+                onClick: a function that will be called when the button is clicked.
+Hooks needed: none.
+
+Css inside the index.css:
+Link - color: blue, hover: lightBlue
+Paragraph - color: black
+H1 - color: blue
+H2 - color: lightBlue
+h3 - color: white
+>>>>>>> Stashed changes
