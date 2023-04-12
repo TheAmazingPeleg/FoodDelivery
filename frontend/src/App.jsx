@@ -17,7 +17,6 @@ function App() {
       <Navbar>
         <SearchBar placeholder="search" />
       </Navbar>
-      <p>asdasd</p>
     </div>
   );
 }
