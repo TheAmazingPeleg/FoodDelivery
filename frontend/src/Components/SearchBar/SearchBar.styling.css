@@ -1,5 +1,10 @@
 @import url('../../GenericColors.css');
 
+*
+{
+    font-family: var(--text-font);
+}
+
 .SearchBar 
 {
     height: 2rem;
@@ -12,10 +17,13 @@
     background-position: 0.5rem center;
     padding-left: 2.3rem;
 }
+
 .SearchBar:focus
 {
     outline:var(--secondary-button-color);
 }
-.SearchBar::placeholder {
+
+.SearchBar::placeholder 
+{
     text-indent: 0.001rem;
 }

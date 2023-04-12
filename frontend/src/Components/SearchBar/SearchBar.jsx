@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SearchBar.styling.css';
 
-function SearchBar({ placeholder,onSearch }) {
+function SearchBar({ placeholder, onSearch }) {
   const [value, setvalue] = useState('');
   const [focused, setFocused] = useState(false);
 
@@ -13,7 +13,7 @@ function SearchBar({ placeholder,onSearch }) {
     event.preventDefault();
     onSearch(value);
   }
-  
+
   function handleFocus() {
     setFocused(true);
   }
@@ -29,7 +29,7 @@ function SearchBar({ placeholder,onSearch }) {
   }
 
   return (
-      <input placeholder={focused ? "" : placeholder} className="SearchBar" type="text" value={value} onChange={handleInputChange} onKeyDown={handleKeyPress} onSubmit={handleSubmit} onFocus={handleFocus} onBlur={handleBlur} />
+    <input placeholder={focused ? '' : placeholder} className="SearchBar" type="text" value={value} onChange={handleInputChange} onKeyDown={handleKeyPress} onSubmit={handleSubmit} onFocus={handleFocus} onBlur={handleBlur} />
   );
 }
 
