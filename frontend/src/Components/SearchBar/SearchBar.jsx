@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import './SearchBar.styling.css';
 
-function SearchBar({ onSearch }) {
+function SearchBar({ placeholder,onSearch }) {
   const [value, setvalue] = useState('');
+  const [focused, setFocused] = useState(false);
 
   function handleInputChange(event) {
     setvalue(event.target.value);
@@ -11,7 +13,14 @@ function SearchBar({ onSearch }) {
     event.preventDefault();
     onSearch(value);
   }
+  
+  function handleFocus() {
+    setFocused(true);
+  }
 
+  function handleBlur() {
+    setFocused(false);
+  }
   function handleKeyPress(event) {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -20,9 +29,7 @@ function SearchBar({ onSearch }) {
   }
 
   return (
-    <div className="SearchBar" onSubmit={handleSubmit}>
-      <input type="text" value={value} onChange={handleInputChange} onKeyDown={handleKeyPress} />
-    </div>
+      <input placeholder={focused ? "" : placeholder} className="SearchBar" type="text" value={value} onChange={handleInputChange} onKeyDown={handleKeyPress} onSubmit={handleSubmit} onFocus={handleFocus} onBlur={handleBlur} />
   );
 }
 

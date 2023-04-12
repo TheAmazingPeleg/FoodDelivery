@@ -14,7 +14,7 @@ Props required: <list of props by order!>
 Hooks needed: <list of hooks>
 
 SearchBar -
-Props required: a call back function which handles the search logic- the search values and what to do with them.
+Props required: a call back function which handles the search logic- the search values and what to do with them. and a text value for the placeholder.
 Hooks needed: useState.
 
 Navbar -
