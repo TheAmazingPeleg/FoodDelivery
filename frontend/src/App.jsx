@@ -13,11 +13,12 @@ function App() {
   //   <h3>hey</h3>
   //   <Input type="text" name="hey" />
   // </div>
-  <div>
-    <Navbar>
-    <SearchBar  placeholder="search" ></SearchBar>
-    </Navbar>
-  </div>
+    <div>
+      <Navbar>
+        <SearchBar placeholder="search" />
+      </Navbar>
+      <p>asdasd</p>
+    </div>
   );
 }
 

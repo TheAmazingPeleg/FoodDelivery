@@ -2,7 +2,8 @@
 @import url('../../GenericColors.css');
 
 *{
-    font-family: var(--Navbar-font);
+    font-family: var(--text-font);
+    color: var(--Navbar-text-color) !important;
 }
 
 .navbar {
@@ -23,7 +24,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-left: 5rem;
+    padding-left: 3.25rem;
 }
 
 .navbar-list-item-anchor {
@@ -51,8 +52,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 25rem;
-    margin-right: 25rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
 }
 
 .navbar-right {
