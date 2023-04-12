@@ -1,0 +1,22 @@
+div{
+    display: flex;
+    flex-direction: column;
+}
+lable {
+    border-radius: 15px 15px 0px 0px;
+    background: blue;
+    color:white;
+    text-align: center;
+}
+input {
+    color: gray;
+    border: 1px solid black;
+    border-radius: 0px 0px 15px 15px;
+    padding: 5px;
+    transition: 0.05s;
+}
+input:focus {
+    color: black;
+    border: 2px solid blue;
+    outline: none;
+  }
