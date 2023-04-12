@@ -1,0 +1,21 @@
+@import url('../../GenericColors.css');
+
+.SearchBar 
+{
+    height: 2rem;
+    width: 17rem;
+    border: 0.01rem solid var(--secondary-button-color);
+    border-radius: 0.7rem;
+    background-image: url('../../assets/SearchIcon.png');
+    background-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-position: 0.5rem center;
+    padding-left: 2.3rem;
+}
+.SearchBar:focus
+{
+    outline:var(--secondary-button-color);
+}
+.SearchBar::placeholder {
+    text-indent: 0.001rem;
+}
