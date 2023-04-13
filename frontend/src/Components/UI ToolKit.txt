@@ -2,6 +2,8 @@ MainTheme (app design) - Eyal, Itay
 Generic css colors TypeDef - Eyal, Itay
 Button - Daniel
 List - Daniel
+popup: generic, errormMessage, successMessage - Daniel
+iconButton - Daniel
 
 instructions - each developer creates his Components inside frontend/src/Components/<componentName>,
 
@@ -12,7 +14,7 @@ Props required: <list of props by order!>
 Hooks needed: <list of hooks>
 
 SearchBar -
-Props required: a call back function which handles the search logic- the search values and what to do with them. and a text value for the placeholder.
+Props required: a call back function which handles the search logic- the search values and what to do with them. and a text value for the placeholder. and a text value for the placeholder.
 Hooks needed: useState.
 
 Navbar -

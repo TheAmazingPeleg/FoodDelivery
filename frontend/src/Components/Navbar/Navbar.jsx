@@ -1,34 +1,29 @@
 import React from 'react';
 import './Navbar.styling.css';
+import SearchBar from '../SearchBar/SearchBar';
 
-function Navbar({ children }) {
+function Navbar() {
   return (
-    <nav className="navbar">
-      <ol className="navbar-list">
+    <ol className="navbar-list">
 
-        <li className="navbar-left">
-          <a className="navbar-list-item-anchor" href="/">Home</a>
-          <a className="navbar-list-item-anchor" href="youtube.com">About Us</a>
-        </li>
+      <li className="navbar-left">
+        <a className="navbar-list-item-anchor" href="/">Home</a>
+        <a className="navbar-list-item-anchor" href="youtube.com">About Us</a>
+      </li>
 
-        <div className="navbar-middle">
-          <li className="navbar-list-item">
-            {React.Children.toArray(children).find((child) => child.type.name === 'SearchBar')}
-          </li>
-        </div>
+      <li>
+        <SearchBar />
+      </li>
 
-        <li className="navbar-right">
-          {/* temporary */}
-          <button type="button" className="navbar-list-item-button">Login</button>
-          <button type="button" className="navbar-list-item-button">Sign Up</button>
-          <a href="example.com">
-            <img className="navbar-list-item-image" src="https://github.com/ColmanDevClub.png" alt="Colman Dev Club logo" />
-          </a>
-          {/* temporary */}
-        </li>
+      <li className="navbar-right">
+        <button type="button" className="navbar-list-item-button">Login</button>
+        <button type="button" className="navbar-list-item-button">Sign Up</button>
+        <a href="example.com">
+          <img className="navbar-list-item-image" src="https://github.com/ColmanDevClub.png" alt="Colman Dev Club logo" />
+        </a>
+      </li>
 
-      </ol>
-    </nav>
+    </ol>
   );
 }
 export default Navbar;
