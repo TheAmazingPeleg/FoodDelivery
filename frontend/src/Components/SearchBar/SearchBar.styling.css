@@ -1,12 +1,8 @@
 @import url('../../GenericColors.css');
 
-*
-{
-    font-family: var(--text-font);
-}
-
 .SearchBar 
 {
+    font-family: var(--text-font);
     height: 2rem;
     width: 17rem;
     border: 0.01rem solid var(--secondary-button-color);
