@@ -2,6 +2,7 @@
 
 .SearchBar 
 {
+    font-family: var(--text-font);
     height: 2rem;
     width: 17rem;
     border: 0.01rem solid var(--secondary-button-color);
@@ -12,10 +13,13 @@
     background-position: 0.5rem center;
     padding-left: 2.3rem;
 }
+
 .SearchBar:focus
 {
     outline:var(--secondary-button-color);
 }
-.SearchBar::placeholder {
+
+.SearchBar::placeholder 
+{
     text-indent: 0.001rem;
 }
