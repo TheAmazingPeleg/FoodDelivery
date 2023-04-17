@@ -36,3 +36,30 @@ h2 {
 h3 {
   color: white;
 }
+
+stat-view {
+  width: 200px;
+  margin: 10px 15px;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#stat-1{
+  background-color: var(--generic-blue);
+}
+#stat-2{
+  background-color: var(--generic-purple);
+}
+#stat-3{
+  background-color: var(--generic-red);
+}
+#stat-4{
+  background-color: var(--generic-orange);
+}
+#stat-5{
+  background-color: var(--generic-yellow);
+}
+#stat-6{
+  background-color: var(--generic-green);
+}
