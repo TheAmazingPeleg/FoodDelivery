@@ -2,7 +2,7 @@ import React from 'react';
 import AdminLogin from '../../Components/Admin/AdminLogin';
 import Dashboard from '../../Components/Admin/Dashboard';
 
-function Home() {
+function AdminHome() {
   const authToken = false;
 
   return (
@@ -11,4 +11,4 @@ function Home() {
     </div>
   );
 }
-export default Home;
+export default AdminHome;
