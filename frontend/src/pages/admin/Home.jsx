@@ -3,11 +3,11 @@ import AdminLogin from '../../Components/Admin/AdminLogin';
 import Dashboard from '../../Components/Admin/Dashboard';
 
 function AdminHome() {
-  const authToken = false;
+  const authToken = true;
 
   return (
     <div>
-      {authToken ? <AdminLogin /> : <Dashboard />}
+      {authToken ? <Dashboard /> : <AdminLogin />}
     </div>
   );
 }
