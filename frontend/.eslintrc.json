@@ -19,6 +19,7 @@
     "rules": {
         "react/prop-types": "off",
         "react/jsx-props-no-spreading": "off",
-        "linebreak-style": "off"
+        "react/void-dom-elements-no-children": "off",
+        "linebreak-style": "off",
     }
 }
