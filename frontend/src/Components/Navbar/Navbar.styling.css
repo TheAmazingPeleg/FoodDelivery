@@ -1,35 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('../../GenericColors.css');
 
-*{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
+.navbar-list > li > * {
+    color: var(--Navbar-text-color);
+    font-family: var(--text-font);
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 5rem;
-    width: 100%;
-    background-color: #e1f5fe ;
-    box-shadow: 0px 2px 4px #5a5b6a3d, 0px 1px 2px #3a3a443d;
-}
-  
-.navbar-list{
+.navbar-list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-items: center;
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    padding-left: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 5rem;
+    background-color: var(--Navbar-background-color);
+    box-shadow: 0px 2px 4px #5a5b6a3d, 0px 1px 2px #3a3a443d;
+    justify-content: space-between;
 }
 
 .navbar-list-item-anchor {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2b373f;
     text-decoration: none;
 }
 
@@ -37,22 +30,12 @@
     text-decoration: underline;
 }
 
-.navbar-left{
+.navbar-left {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-}
-
-.navbar-middle{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 25rem;
-    margin-right: 25rem;
-
 }
 
 .navbar-right {
@@ -63,25 +46,23 @@
     gap: 2rem;
 }
 
-
-.navbar-list-item-button{
+.navbar-list-item-button {
     height: 2.5rem;
     padding: 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: #2595e7;
-    color: #2b373f;
+    background-color: var(--primary-button-color);
     border: none;
     border-radius: 0.25rem;
     transition: background-color 0.2s ease-in-out;
 }
 
 .navbar-list-item-button:hover {
-    background-color: #007cd6;
+    background-color: var(--secondary-button-color);
     cursor: pointer;
 }
-  
-.navbar-list-item-image{
+
+.navbar-list-item-image {
     border-radius: 50%;
     width: 4rem;
     height: 4rem;

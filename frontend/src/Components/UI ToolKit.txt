@@ -14,11 +14,23 @@ Props required: <list of props by order!>
 Hooks needed: <list of hooks>
 
 SearchBar -
-Props required: a call back function which handles the search logic- the search values and what to do with them.
+Props required: a call back function which handles the search logic- the search values and what to do with them. and a text value for the placeholder. and a text value for the placeholder.
 Hooks needed: useState.
 
 Navbar -
 Props required: every component that needs to be shown at the navbar.
+Hooks needed: none.
+
+Popup -
+Props required:
+message: a string representing the message that will be displayed in the popup.
+type: a string representing the type of the popup.
+Hooks needed: none.
+
+IconButton -
+Props required:
+iconClassName: a string representing the class name of the icon that will be displayed in the button.
+onClick: a function that will be called when the button is clicked.
 Hooks needed: none.
 
 Input -

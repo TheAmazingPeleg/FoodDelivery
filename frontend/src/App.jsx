@@ -1,16 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import Input from './Components/Input/Input';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './pages/Home';
+import AdminHome from './pages/admin/Home';
+import Cart from './pages/Cart';
+import TrackOrder from './pages/TrackOrder';
 
 function App() {
   return (
-  <div>
-    <a href="">hey</a>
-    <h1>hey</h1>
-    <h2>hey</h2>
-    <h3>hey</h3>
-    <Input type="text" name="hey" />
-  </div>
+    <div>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/trackorder" element={<TrackOrder />} />
+          <Route path="/admin/dashboard" element={<AdminHome />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
