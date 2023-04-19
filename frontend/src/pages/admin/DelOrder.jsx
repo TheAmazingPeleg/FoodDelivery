@@ -1,6 +1,6 @@
 import { React, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import AdminAuthContext from '../../Components/AuthContext';
+import { AdminAuthContext } from '../../Components/AuthContext/AdminAuthContext';
 
 function DelOrder() {
   const AdminAuth = useContext(AdminAuthContext);

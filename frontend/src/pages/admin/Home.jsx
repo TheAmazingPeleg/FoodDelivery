@@ -1,7 +1,7 @@
 import { React, useContext } from 'react';
 import AdminLogin from '../../Components/Admin/AdminLogin';
 import Dashboard from '../../Components/Admin/Dashboard';
-import AdminAuthContext from '../../Components/AuthContext';
+import { AdminAuthContext } from '../../Components/AuthContext/AdminAuthContext';
 
 function AdminHome() {
   const AdminAuth = useContext(AdminAuthContext);

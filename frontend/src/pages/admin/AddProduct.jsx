@@ -1,6 +1,6 @@
 import { React, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AdminAuthContext from '../../Components/AuthContext';
+import { AdminAuthContext } from '../../Components/AuthContext/AdminAuthContext';
 
 function AddProduct() {
   const AdminAuth = useContext(AdminAuthContext);
