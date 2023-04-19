@@ -8,6 +8,7 @@ function Nav() {
         <li><a href="categories">Categories</a></li>
         <li><a href="addCategory">Add Category</a></li>
         <li><a href="addProduct">Add Product</a></li>
+        <li><a href="Orders">Orders</a></li>
         <hr />
         <li><a href="logout">Logout</a></li>
       </ul>

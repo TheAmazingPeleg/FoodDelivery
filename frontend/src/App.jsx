@@ -1,5 +1,7 @@
 import { React, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AdminAuthContext } from './Components/AuthContext/AdminAuthContext';
+import { UserAuthContext } from './Components/AuthContext/UserAuthContext';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './pages/Home';
 import AdminHome from './pages/admin/Home';
@@ -16,34 +18,36 @@ import EditOrder from './pages/admin/EditOrder';
 import EditCategory from './pages/admin/EditCategory';
 import EditProduct from './pages/admin/EditProduct';
 import DelOrder from './pages/admin/DelOrder';
-import AdminAuthContext from './Components/AuthContext';
 import Orders from './pages/admin/Orders';
 
 function App() {
   const [AdminAuth] = useState('123456');
+  const [UserAuth] = useState('123456');
   return (
     <AdminAuthContext.Provider value={AdminAuth}>
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/trackorder" element={<TrackOrder />} />
-          <Route path="/admin/dashboard" element={<AdminHome />} />
-          <Route path="/admin/categories" element={<Categories />} />
-          <Route path="/admin/orders" element={<Orders />} />
-          <Route path="/admin/addProduct" element={<AddProduct />} />
-          <Route path="/admin/addCategory" element={<AddCategory />} />
-          <Route path="/admin/category/:id" element={<Category />} />
-          <Route path="/admin/product/:id" element={<Product />} />
-          <Route path="/admin/editOrder/:id" element={<EditOrder />} />
-          <Route path="/admin/editProduct/:id" element={<EditProduct />} />
-          <Route path="/admin/editCategory/:id" element={<EditCategory />} />
-          <Route path="/admin/delProduct/:id" element={<DelProduct />} />
-          <Route path="/admin/delCategory/:id" element={<DelCategory />} />
-          <Route path="/admin/delOrder/:id" element={<DelOrder />} />
-        </Routes>
-      </BrowserRouter>
+      <UserAuthContext.Provider value={UserAuth}>
+        <Navbar />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/trackorder" element={<TrackOrder />} />
+            <Route path="/admin/dashboard" element={<AdminHome />} />
+            <Route path="/admin/categories" element={<Categories />} />
+            <Route path="/admin/orders" element={<Orders />} />
+            <Route path="/admin/addProduct" element={<AddProduct />} />
+            <Route path="/admin/addCategory" element={<AddCategory />} />
+            <Route path="/admin/category/:id" element={<Category />} />
+            <Route path="/admin/product/:id" element={<Product />} />
+            <Route path="/admin/editOrder/:id" element={<EditOrder />} />
+            <Route path="/admin/editProduct/:id" element={<EditProduct />} />
+            <Route path="/admin/editCategory/:id" element={<EditCategory />} />
+            <Route path="/admin/delProduct/:id" element={<DelProduct />} />
+            <Route path="/admin/delCategory/:id" element={<DelCategory />} />
+            <Route path="/admin/delOrder/:id" element={<DelOrder />} />
+          </Routes>
+        </BrowserRouter>
+      </UserAuthContext.Provider>
     </AdminAuthContext.Provider>
   );
 }
