@@ -12,7 +12,12 @@ import AddCategory from './pages/admin/AddCategory';
 import AddProduct from './pages/admin/AddProduct';
 import DelProduct from './pages/admin/DelProduct';
 import DelCategory from './pages/admin/DelCategory';
+import EditOrder from './pages/admin/EditOrder';
+import EditCategory from './pages/admin/EditCategory';
+import EditProduct from './pages/admin/EditProduct';
+import DelOrder from './pages/admin/DelOrder';
 import AdminAuthContext from './Components/AuthContext';
+import Orders from './pages/admin/Orders';
 
 function App() {
   const [AdminAuth] = useState('123456');
@@ -26,12 +31,17 @@ function App() {
           <Route path="/trackorder" element={<TrackOrder />} />
           <Route path="/admin/dashboard" element={<AdminHome />} />
           <Route path="/admin/categories" element={<Categories />} />
+          <Route path="/admin/orders" element={<Orders />} />
           <Route path="/admin/addProduct" element={<AddProduct />} />
           <Route path="/admin/addCategory" element={<AddCategory />} />
           <Route path="/admin/category/:id" element={<Category />} />
           <Route path="/admin/product/:id" element={<Product />} />
+          <Route path="/admin/editOrder/:id" element={<EditOrder />} />
+          <Route path="/admin/editProduct/:id" element={<EditProduct />} />
+          <Route path="/admin/editCategory/:id" element={<EditCategory />} />
           <Route path="/admin/delProduct/:id" element={<DelProduct />} />
           <Route path="/admin/delCategory/:id" element={<DelCategory />} />
+          <Route path="/admin/delOrder/:id" element={<DelOrder />} />
         </Routes>
       </BrowserRouter>
     </AdminAuthContext.Provider>
