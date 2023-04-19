@@ -1,13 +1,13 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import AdminLogin from '../../Components/Admin/AdminLogin';
 import Dashboard from '../../Components/Admin/Dashboard';
+import AdminAuthContext from '../../Components/AuthContext';
 
 function AdminHome() {
-  const authToken = false;
-
+  const AdminAuth = useContext(AdminAuthContext);
   return (
     <div>
-      {authToken ? <AdminLogin /> : <Dashboard />}
+      {AdminAuth ? <Dashboard /> : <AdminLogin />}
     </div>
   );
 }
