@@ -23,6 +23,8 @@ import Orders from './pages/admin/Orders';
 function App() {
   const [AdminAuth] = useState('123456');
   const [UserAuth] = useState('123456');
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <AdminAuthContext.Provider value={AdminAuth}>
       <UserAuthContext.Provider value={UserAuth}>
@@ -30,7 +32,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
             <Route path="/trackorder" element={<TrackOrder />} />
             <Route path="/admin/dashboard" element={<AdminHome />} />
             <Route path="/admin/categories" element={<Categories />} />

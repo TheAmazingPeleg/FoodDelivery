@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Cart(cartItems, removeFromCart) {
+function Cart(cartItems, setCartItems) {
+  const removeFromCart = (item) => {
+    // eslint-disable-next-line react/destructuring-assignment
+    const updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
+    setCartItems(updatedCartItems);
+  };
+
   return (
     <div>
       <h2>Cart</h2>
