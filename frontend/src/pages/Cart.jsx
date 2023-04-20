@@ -22,12 +22,10 @@ function Cart({ cartItems, setCartItems }) {
               {' '}
               -
               {item.price}
-              {/* eslint-disable-next-line react/button-has-type */}
-              <button onClick={() => removeFromCart(item)}>Remove</button>
+              <button type="button" onClick={() => removeFromCart(item)}>Remove</button>
             </li>
           ))}
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button onClick={() => setCartItems([])}>reset</button>
+          <button type="button" onClick={() => setCartItems([])}>reset</button>
         </ul>
       )}
     </div>
