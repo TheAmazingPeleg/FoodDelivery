@@ -1,10 +1,27 @@
 import React from 'react';
 
-function Cart() {
+function Cart(cartItems, removeFromCart) {
   return (
     <div>
-      Cart
+      <h2>Cart</h2>
+      <ul>
+        {/* eslint-disable-next-line react/destructuring-assignment */}
+        {cartItems.map((item) => (
+          <li key={item.id}>
+            {item.name}
+            {' '}
+            -
+            {item.quantity}
+            {' '}
+            -
+            {item.price}
+            {/* eslint-disable-next-line react/button-has-type */}
+            <button onClick={() => removeFromCart(item)}>Remove</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
+
 export default Cart;
