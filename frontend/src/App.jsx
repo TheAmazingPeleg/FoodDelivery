@@ -32,8 +32,8 @@ function App() {
   return (
     <AdminAuthContext.Provider value={AdminAuth}>
       <UserAuthContext.Provider value={UserAuth}>
-        <Navbar productsList={productsList} />
         <BrowserRouter>
+          <Navbar productsList={productsList} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
