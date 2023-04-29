@@ -1,0 +1,9 @@
+select {
+    text-align: center;
+    width: 15rem;
+    min-height: 2rem;
+}
+
+option {
+    min-height: 1.5rem;
+}
