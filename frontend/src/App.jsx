@@ -19,23 +19,26 @@ import EditCategory from './pages/admin/EditCategory';
 import EditProduct from './pages/admin/EditProduct';
 import DelOrder from './pages/admin/DelOrder';
 import Orders from './pages/admin/Orders';
+import products from './Components/MainPage/ProductData';
+import ViewProduct from './pages/ViewProduct';
 
 function App() {
   const [AdminAuth] = useState('123456');
   const [UserAuth] = useState('123456');
   const [categoriesList, setCategoriesList] = useState([]);
-  const [productsList, setProductsList] = useState([]);
+  const [productsList, setProductsList] = useState(products);
   const [ordersList, setOrdersList] = useState([]);
 
   return (
     <AdminAuthContext.Provider value={AdminAuth}>
       <UserAuthContext.Provider value={UserAuth}>
-        <Navbar />
+        <Navbar productsList={productsList} />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/trackorder" element={<TrackOrder />} />
+            <Route path="/product/:id" element={<ViewProduct products={productsList} />} />
             <Route path="/admin/dashboard" element={<AdminHome />} />
             <Route path="/admin/categories" element={<Categories categories={categoriesList} />} />
             <Route path="/admin/orders" element={<Orders orders={ordersList} />} />

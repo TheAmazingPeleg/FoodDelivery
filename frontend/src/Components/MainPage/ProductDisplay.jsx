@@ -1,10 +1,9 @@
 import React from 'react';
-import products from './ProductData';
 
-function ProductDisplay() {
+function ProductDisplay({ products }) {
   return (
     <div>
-      {products.map((product) => (
+      {products?.map((product) => (
         <div key={product.id}>
           <h2>{product.name}</h2>
           <p>{product.description}</p>

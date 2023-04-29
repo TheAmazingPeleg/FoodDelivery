@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.styling.css';
 import SearchBar from '../SearchBar/SearchBar';
 
-function Navbar() {
+function Navbar({ productsList }) {
   return (
     <ol className="navbar-list">
 
@@ -12,7 +12,7 @@ function Navbar() {
       </li>
 
       <li>
-        <SearchBar />
+        <SearchBar productsList={productsList} placeholder="Search..." />
       </li>
 
       <li className="navbar-right">

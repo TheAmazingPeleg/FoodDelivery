@@ -1,0 +1,23 @@
+.SearchDiv
+{
+    position: absolute;
+    background-color:  var(--background-color);
+    top: 4.3rem;
+    margin: 0 auto;
+    border-radius: 0.7rem;
+    width: 20rem;
+    display: flex;
+    flex-wrap:wrap;
+}
+.Product
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.2rem;
+    align-items: center;
+    
+}
+.Product-image
+{
+    height: 1.2rem;
+}
