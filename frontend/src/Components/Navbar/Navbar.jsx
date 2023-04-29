@@ -1,14 +1,17 @@
-import React from 'react';
+import { React } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import './Navbar.styling.css';
 import SearchBar from '../SearchBar/SearchBar';
+import Cart from '../../assets/Cart.png';
 
 function Navbar({ productsList }) {
+  const location = useLocation();
   return (
     <ol className="navbar-list">
 
       <li className="navbar-left">
-        <a className="navbar-list-item-anchor" href="/">Home</a>
-        <a className="navbar-list-item-anchor" href="youtube.com">About Us</a>
+        <Link to="/" className="navbar-list-item-anchor">Home</Link>
+        <Link to="about-us" className="navbar-list-item-anchor">About Us</Link>
       </li>
 
       <li>
@@ -16,11 +19,15 @@ function Navbar({ productsList }) {
       </li>
 
       <li className="navbar-right">
-        <button type="button" className="navbar-list-item-button">Login</button>
-        <button type="button" className="navbar-list-item-button">Sign Up</button>
-        <a href="example.com">
-          <img className="navbar-list-item-image" src="https://github.com/ColmanDevClub.png" alt="Colman Dev Club logo" />
-        </a>
+        <Link to="/login">
+          <button type="button" className="navbar-list-item-button">Login</button>
+        </Link>
+        <Link to="/sign-up">
+          <button type="button" className="navbar-list-item-button">Sign Up</button>
+        </Link>
+        <Link to="/cart">
+          {location.pathname === '/' ? <img className="navbar-list-item-image" src={Cart} alt="Cart Icon" /> : null}
+        </Link>
       </li>
 
     </ol>

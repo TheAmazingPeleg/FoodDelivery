@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @import url('../../GenericColors.css');
 
-.navbar-list > li > * {
+.navbar-list > li > * > * {
     color: var(--Navbar-text-color);
     font-family: var(--text-font);
 }
@@ -20,7 +20,9 @@
     justify-content: space-between;
 }
 
-.navbar-list-item-anchor {
+.navbar-left > .navbar-list-item-anchor {
+    color: var(--Navbar-text-color);
+    font-family: var(--text-font);
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
@@ -63,7 +65,6 @@
 }
 
 .navbar-list-item-image {
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 2.6rem;
+    height: 2.6rem;
 }
