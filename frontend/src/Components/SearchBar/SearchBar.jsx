@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import './SearchBar.styling.css';
+import SearchDiv from './SearchDiv';
 
-function SearchBar({ placeholder, onSearch }) {
+function SearchBar({ placeholder, productsList }) {
   const [value, setvalue] = useState('');
   const [focused, setFocused] = useState(false);
+  const [show, setShow] = useState(false);
 
   function handleInputChange(event) {
     setvalue(event.target.value);
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    onSearch(value);
+    if (event.target.value !== '') {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
   }
 
   function handleFocus() {
@@ -21,15 +23,12 @@ function SearchBar({ placeholder, onSearch }) {
   function handleBlur() {
     setFocused(false);
   }
-  function handleKeyPress(event) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      onSearch(value);
-    }
-  }
 
   return (
-    <input placeholder={focused ? '' : placeholder} className="SearchBar" type="text" value={value} onChange={handleInputChange} onKeyDown={handleKeyPress} onSubmit={handleSubmit} onFocus={handleFocus} onBlur={handleBlur} />
+    <>
+      <input placeholder={focused ? '' : placeholder} className="SearchBar" type="text" value={value} onChange={handleInputChange} onFocus={handleFocus} onBlur={handleBlur} />
+      {show && <SearchDiv className="SearchDiv" productsList={productsList} value={value} />}
+    </>
   );
 }
 
