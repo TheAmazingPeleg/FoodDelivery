@@ -1,11 +1,13 @@
 import React from 'react';
-import MainPage from './MainPage/MainPage';
+// import ProductDisplay from '../Components/MainPage/ProductDisplay';
+import CategoryDisplay from '../Components/MainPage/CategoryDisplay/CategoryDisplay';
 
 function Home() {
   return (
     <div>
       Home
-      <MainPage />
+      {/* <ProductDisplay /> */}
+      <CategoryDisplay />
     </div>
   );
 }
