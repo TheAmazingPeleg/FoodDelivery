@@ -8,8 +8,6 @@ const productSchema = new mongoose.Schema({
     image: Buffer,
     inStock: Boolean,
     allergies: String,
-    changes: String,
-    amount: Number,
     Category: Category.schema,
 })
 
